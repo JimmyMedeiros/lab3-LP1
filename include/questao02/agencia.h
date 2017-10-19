@@ -2,6 +2,7 @@
 #define _AGENCIA_H
 
 #include <vector>
+#include <memory>
 #include "conta"
 
 class Agencia
@@ -23,7 +24,7 @@ depósitos, emissão de saldo e extrato, além de transferência entre contas.
 	void extrato();
 	void transferir();
 private:
-	std::vector<Conta> contas;
+	std::vector<unique_ptr<Conta>> contas;
 };
 
 #endif
