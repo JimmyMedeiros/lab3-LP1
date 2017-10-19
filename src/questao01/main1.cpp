@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
 
 	for (auto i = lista.begin(); i != lista.end(); ++i)
 	{
-		std::cout << (**i) << std::endl;	
+		std::cout << (**i) << std::endl;
 	}
 
 	return 0;
