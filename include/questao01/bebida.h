@@ -1,3 +1,12 @@
+/**
+ * @file     produto.cpp
+ * @brief    Declaração da classe Bebida derivada da classe Produto.
+ *
+ * @author   Josivan Medeiros da Silva Gois
+ * @since    20/10/2017
+ * @date     23/10/2017
+ */
+
 #ifndef _BEBIDA_H_
 #define _BEBIDA_H_
 

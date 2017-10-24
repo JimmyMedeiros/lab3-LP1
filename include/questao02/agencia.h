@@ -16,6 +16,7 @@ bancária. Uma agência bancária deve armazenar um conjunto de contas e permiti
 operações básicas: criações de conta, exclusão de contas, saques (respeitando o saldo e o limite),
 depósitos, emissão de saldo e extrato, além de transferência entre contas.
 **/
+	
 	void criar_conta();
 	void excluir_conta();
 	void sacar();
