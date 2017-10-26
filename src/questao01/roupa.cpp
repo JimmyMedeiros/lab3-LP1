@@ -1,8 +1,19 @@
 #include <iomanip>
 #include "roupa.h"
 
+/**
+* @brief	Construtor padrão.
+*/
 Roupa::Roupa() {}
-// marca, sexo (M/F) e tamanho;
+/**
+* @brief	Construtor por parâmetros.
+* @param	_codigo Uma std::string com o novo valor do código de barras.
+* @param	_descricao Uma std::string com a descrição da roupa.
+* @param	_preco Uma std::string com a descrição da roupa.
+* @param	_marca Uma std::string com a marca da roupa.
+* @param	_sexo Um char que indica o sexo, M para masculino e F para feminino.
+* @param	_tamanho Uma std::string com o tamanho, ex: PP, P, M, G, etc.
+*/
 Roupa::Roupa(std::string _codigo, std::string _descricao, short _preco, 
 	std::string _marca, char _sexo, std::string _tamanho):
 	Produto(_codigo, _descricao, _preco), m_marca(_marca), m_sexo(_sexo), m_tamanho(_tamanho) {}

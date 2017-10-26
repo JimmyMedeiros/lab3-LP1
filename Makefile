@@ -49,18 +49,21 @@ $(OBJ_DIR)/roupa.o: $(SRC_DIR)/questao01/roupa.cpp
 	$(CC) -c $(CPPFLAGS) -I$(INC_DIR)/questao01 -o $@ $<
 
 ####	Questão 02		####
-questao02: $(OBJ_DIR)/main2.o $(OBJ_DIR)/dado.o $(OBJ_DIR)/player.o
+questao02: $(OBJ_DIR)/main2.o $(OBJ_DIR)/agencia.o $(OBJ_DIR)/conta.o
 	@echo "============="
 	@echo "Ligando o alvo $@"
 	@echo "============="
 	$(CC) $(CPPFLAGS) -o $(BIN_DIR)/$@ $^
 	@echo "+++ [Executavel questao02 criado em $(BIN_DIR)] +++"
 	@echo "============="
-$(OBJ_DIR)/main2.o: $(SRC_DIR)/questao02/main2.cpp
+
+$(OBJ_DIR)/main2.o: $(SRC_DIR)/questao02/main2.cpp $(OBJ_DIR)/conta.o
 	$(CC) -c $(CPPFLAGS) -I$(INC_DIR)/questao02 -o $@ $<
-$(OBJ_DIR)/dado.o: $(SRC_DIR)/questao02/dado.cpp
+
+$(OBJ_DIR)/agencia.o: $(SRC_DIR)/questao02/agencia.cpp $(OBJ_DIR)/conta.o
 	$(CC) -c $(CPPFLAGS) -I$(INC_DIR)/questao02 -o $@ $<
-$(OBJ_DIR)/player.o: $(SRC_DIR)/questao02/player.cpp
+
+$(OBJ_DIR)/conta.o: $(SRC_DIR)/questao02/conta.cpp
 	$(CC) -c $(CPPFLAGS) -I$(INC_DIR)/questao02 -o $@ $<
 
 # Alvo (target) para a geração automatica de documentacao usando o Doxygen.
