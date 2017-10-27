@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Laboratório 3 de Linguagem de Programação I
-   &#160;<span id="projectnumber">I</span>
+   &#160;<span id="projectnumber">1.0</span>
    </div>
    <div id="projectbrief">Documentação das 3 questões do terceiro laboratório da disciplina Linguagem de programação</div>
   </td>
@@ -108,8 +108,12 @@ Diagrama de colaboração para Roupa:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros públicos</h2></td></tr>
-<tr class="memitem:aae814e79a5bae6245e6bc60edd4b7c37"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae814e79a5bae6245e6bc60edd4b7c37"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Roupa</b> (std::string _codigo, std::string _descricao, short _preco, std::string _marca, char _sexo, std::string _tamanho)</td></tr>
+<tr class="memitem:a0b8186c1c35089bebd88c8a3d0acf74b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b8186c1c35089bebd88c8a3d0acf74b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRoupa.html#a0b8186c1c35089bebd88c8a3d0acf74b">Roupa</a> ()</td></tr>
+<tr class="memdesc:a0b8186c1c35089bebd88c8a3d0acf74b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão. <br /></td></tr>
+<tr class="separator:a0b8186c1c35089bebd88c8a3d0acf74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae814e79a5bae6245e6bc60edd4b7c37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRoupa.html#aae814e79a5bae6245e6bc60edd4b7c37">Roupa</a> (std::string _codigo, std::string _descricao, short _preco, std::string _marca, char _sexo, std::string _tamanho)</td></tr>
+<tr class="memdesc:aae814e79a5bae6245e6bc60edd4b7c37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor por parâmetros.  <a href="#aae814e79a5bae6245e6bc60edd4b7c37">Mais...</a><br /></td></tr>
 <tr class="separator:aae814e79a5bae6245e6bc60edd4b7c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a627cb05c4d7401b97bae9902b6fcbff8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a627cb05c4d7401b97bae9902b6fcbff8"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getMarca</b> ()</td></tr>
@@ -180,6 +184,70 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_descricao</b
 double&#160;</td><td class="memItemRight" valign="bottom"><b>m_preco</b></td></tr>
 <tr class="separator:af4f68aad97167802a1dca2b8ddb188eb inherit pro_attribs_classProduto"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
+<a class="anchor" id="aae814e79a5bae6245e6bc60edd4b7c37"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Roupa::Roupa </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>_codigo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>_descricao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>_preco</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>_marca</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>_sexo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>_tamanho</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor por parâmetros. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_codigo</td><td>Uma std::string com o novo valor do código de barras. </td></tr>
+    <tr><td class="paramname">_descricao</td><td>Uma std::string com a descrição da roupa. </td></tr>
+    <tr><td class="paramname">_preco</td><td>Uma std::string com a descrição da roupa. </td></tr>
+    <tr><td class="paramname">_marca</td><td>Uma std::string com a marca da roupa. </td></tr>
+    <tr><td class="paramname">_sexo</td><td>Um char que indica o sexo, M para masculino e F para feminino. </td></tr>
+    <tr><td class="paramname">_tamanho</td><td>Uma std::string com o tamanho, ex: PP, P, M, G, etc. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
 <li>include/questao01/<a class="el" href="roupa_8h_source.html">roupa.h</a></li>
 <li>src/questao01/roupa.cpp</li>

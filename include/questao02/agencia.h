@@ -21,6 +21,9 @@ using iter_Conta = __gnu_cxx::__normal_iterator<std::unique_ptr<Conta>*, std::ve
 
 class Agencia
 {
+private:
+	iter_Conta procurar(num_type _numero);
+	num_type numero;
 public:
 /**
  * @brief Construtor padrão
@@ -49,19 +52,29 @@ public:
 	void criar_conta(Conta & c1);
 /**
  * @brief	Exclui uma conta.
- * @brief	O número da conta a ser excluída.
+ * @param	_numero O número da conta a ser excluída.
  */
 	void excluir_conta(num_type _numero);
-	void sacar(num_type _numero);
-	void depositar();
-	void saldo();
-	void extrato();
-	void transferir();
+/**
+ * @brief	Saca um valor de uma Conta.
+ * @param	_numero O número da conta .
+ * @param	valor O valor a ser sacado.
+ */
+	void sacar( num_type _numero, float valor );
+/**
+ * @brief	Deposito um valor em uma Conta.
+ * @param	_numero O número da conta .
+ * @param	valor O valor a ser depositado.
+ */
+	void depositar( num_type _numero, float valor );
+	void saldo(  );
+	void extrato(  );
+	void transferir(  );
 
 	std::vector<std::unique_ptr<Conta>> contas;
-private:
-	iter_Conta procurar(num_type _numero);
-	num_type numero;
+
+//=== Operadores
+	friend std::ostream& operator<< (std::ostream &o, Agencia const &a);
 };
 
 #endif

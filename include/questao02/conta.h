@@ -18,8 +18,6 @@ class Conta
 {
 private:
 
-/** b) Uma movimentação possui uma descrição, um valor e uma indicação se ela é uma movimentação
-de crédito ou débito. **/
 	//=== Atributos
 	std::string titular; /**< O nome do titular da conta */
 	num_type agencia;
@@ -34,14 +32,25 @@ public:
 	Conta();
 	Conta(std::string _titular, num_type _agencia, num_type _numero, float _saldo, bool _status, float _limite);
 	~Conta();
+
 //---Getters e Setters
 
 /**
  * @brief	Muda a agência da conta.
  */
 	void set_agencia(num_type _agencia);
+/**
+ * @brief	Muda o saldo da conta.
+ */
+	void set_saldo(float _saldo);
+/**
+ * @brief	Retorna o número da Conta.
+ */
 	num_type get_numero();
-
+/**
+ * @brief	Retorna o saldo da Conta.
+ */
+	float get_saldo();
 //=== Movimentações
 //	void movimentacao();
 

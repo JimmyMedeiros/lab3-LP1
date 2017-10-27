@@ -10,8 +10,10 @@
 #include "agencia.h"
 using iter_Conta = __gnu_cxx::__normal_iterator<std::unique_ptr<Conta>*, std::vector<std::unique_ptr<Conta>> >;
 
+#define ACCOUNT_NOT_FOUND "Conta não encontrada\n";
+
 //=== Funcções Privadas
-iter_Conta Agencia::procurar(num_type _numero)
+iter_Conta Agencia::procurar( num_type _numero )
 {
 	for (auto it = contas.begin(); it != contas.end(); ++it)
 	{
@@ -24,7 +26,7 @@ iter_Conta Agencia::procurar(num_type _numero)
 }
 //=== Funções Públicas
 
-Agencia::Agencia(num_type _numero) : numero(_numero){ /* vazio */ }
+Agencia::Agencia( num_type _numero ) : numero(_numero){ /* vazio */ }
 
 void Agencia::criar_conta(Conta & c1)
 {
@@ -32,7 +34,7 @@ void Agencia::criar_conta(Conta & c1)
 	c1.set_agencia(numero);
 }
 
-void Agencia::criar_conta(std::string _titular, num_type _numero, bool _status)
+void Agencia::criar_conta( std::string _titular, num_type _numero, bool _status )
 {
 	if (procurar(_numero) != iter_Conta(nullptr))
 	{
@@ -42,7 +44,7 @@ void Agencia::criar_conta(std::string _titular, num_type _numero, bool _status)
 	this->contas.push_back(std::unique_ptr<Conta>(new Conta(_titular, this->numero, _numero, 0.0, _status, 1000.0 )));
 }
 
-void Agencia::excluir_conta(num_type _numero)
+void Agencia::excluir_conta( num_type _numero )
 {
 	auto conta_it = procurar(_numero);
 	if (conta_it != iter_Conta(nullptr))
@@ -50,20 +52,46 @@ void Agencia::excluir_conta(num_type _numero)
 		contas.erase(conta_it);
 		return;
 	}
-	std::cerr << "Conta não encontrada\n";
+	std::cerr << ACCOUNT_NOT_FOUND;
 }
-void Agencia::sacar(num_type _numero)
+
+void Agencia::sacar( num_type _numero, float valor )
 {
-	for (auto it = contas.begin(); it != contas.end(); ++it)
+	auto conta_it = procurar(_numero);
+	if (conta_it != iter_Conta(nullptr))
 	{
-		if ((*it)->get_numero() == _numero)
+		if (valor <= (*conta_it)->get_saldo())
 		{
-			contas.erase(it);
+			(*conta_it)->set_saldo( (*conta_it)->get_saldo() - valor );
 			return;
 		}
-	};
+		std::cerr << "Saldo insuficiente\n";
+		return;
+	}
+	std::cerr << ACCOUNT_NOT_FOUND;
+	return;
 }
-//Agencia::void depositar();
-//Agencia::void saldo();
-//Agencia::void extrato();
-//Agencia::void transferir();
+void Agencia::depositar( num_type _numero, float valor )
+{
+	auto conta_it = procurar(_numero);
+	if (conta_it != iter_Conta(nullptr))
+	{
+		(*conta_it)->set_saldo( (*conta_it)->get_saldo() + valor );
+		return;
+	}
+	std::cerr << ACCOUNT_NOT_FOUND;
+	return;
+}
+//void Agencia::saldo();
+//void Agencia::extrato();
+//void Agencia::transferir();
+//=== Operadores
+
+std::ostream& operator<< (std::ostream &o, Agencia const &a) {
+	o << ">>> Contas na Agência " << a.numero << "\n";
+	for (auto it = a.contas.begin(); it != a.contas.end(); ++it)
+	{
+		std::cout << **it;
+	}
+	return o;
+}

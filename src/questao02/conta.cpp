@@ -21,16 +21,24 @@ void Conta::set_agencia(unsigned int _agencia)
 {
 	this->agencia = _agencia;
 }
+void Conta::set_saldo(float _saldo)
+{
+	this->saldo = _saldo;
+}
 num_type Conta::get_numero()
 {
 	return this->numero;
 }
-
+float Conta::get_saldo()
+{
+	return this->saldo;
+}
 
 //=== Operadores
 std::ostream& operator<< (std::ostream &o, Conta const &c) {
 	o << "Conta Banco do Brazel\n";
 	o << "Titular: " << c.titular << "\n";
 	o << "Número da Conta: " << c.numero << "\n";
+	o << "Saldo: " << c.saldo << "\n";
 	return o;
 }

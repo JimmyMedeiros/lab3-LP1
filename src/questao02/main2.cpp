@@ -19,17 +19,20 @@ int main(int argc, char const *argv[])
 	bb->criar_conta("Teobaldo Stallman da Silva", 114251);
 	bb->criar_conta("Pedrinho Estacionador (aka Homem Aranha)", 60617);
 
-	std::cout << "=== Banco do Brazel ===\n";
-	for (auto i = bb->contas.begin(); i != bb->contas.end(); ++i)
-	{
-		std::cout << **i;
-	}
-	bb->excluir_conta(60617);
+	(*bb->contas.begin())->set_saldo(1000);
 
-	std::cout << "=== Banco do Brazel Depois de excluir conta ===\n";
-	for (auto i = bb->contas.begin(); i != bb->contas.end(); ++i)
-	{
-		std::cout << **i;
-	}
+	std::cout << "=== Banco do Brazel ===\n\n";
+	std::cout << *bb;
+
+	bb->excluir_conta(6617);
+
+	std::cout << "=== Banco do Brazel Depois de excluir conta ===\n\n";
+	std::cout << *bb;
+
+	bb->sacar(114251 ,500.0f);
+	bb->depositar(60617 ,2500);
+
+	std::cout << *bb;
+
 	return 0;
 }
