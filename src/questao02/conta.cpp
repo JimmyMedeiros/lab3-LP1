@@ -33,12 +33,19 @@ float Conta::get_saldo()
 {
 	return this->saldo;
 }
+void Conta::add_movimentacao(std::string mv)
+{
+	movimentacao.push_back(mv);
+}
+/*std::vector<std::string> Conta::get_movimentacao(){
+	return movimentacao;
+}*/
 
 //=== Operadores
 std::ostream& operator<< (std::ostream &o, Conta const &c) {
 	o << "Conta Banco do Brazel\n";
 	o << "Titular: " << c.titular << "\n";
 	o << "Número da Conta: " << c.numero << "\n";
-	o << "Saldo: " << c.saldo << "\n";
+	//o << "Saldo: " << c.saldo << "\n";
 	return o;
 }

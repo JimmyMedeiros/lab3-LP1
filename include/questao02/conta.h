@@ -11,6 +11,7 @@
 #define _CONTA_H
 
 #include <iostream>
+#include <vector>
 
 using num_type = unsigned int;
 
@@ -26,6 +27,7 @@ private:
 	bool status; /**< O status da conta indica se ela é ou não conta especial */ 
 	float limite;
 public:
+	std::vector<std::string> movimentacao; /**< Todas as movimentações realizadas na conta */
 /**
  * @brief	Construtor padrão.
  */
@@ -52,7 +54,8 @@ public:
  */
 	float get_saldo();
 //=== Movimentações
-//	void movimentacao();
+	void add_movimentacao(std::string mv);
+	//std::vector<std::string> get_movimentacao();
 
 //=== Operadores
 	friend std::ostream& operator<< (std::ostream &o, Conta const &c);

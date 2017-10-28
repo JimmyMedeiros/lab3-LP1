@@ -32,6 +32,12 @@ int main(int argc, char const *argv[])
 	bb->sacar(114251 ,500.0f);
 	bb->depositar(60617 ,2500);
 
+	bb->saldo( 60617 );
+
+	std::cout << "\n\n>>>>>> IMPRIMINDO EXTRATO\n\n";
+
+	bb->extrato( 60617 );
+
 	std::cout << *bb;
 
 	return 0;

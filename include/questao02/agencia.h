@@ -57,19 +57,32 @@ public:
 	void excluir_conta(num_type _numero);
 /**
  * @brief	Saca um valor de uma Conta.
- * @param	_numero O número da conta .
+ * @param	_numero O número da conta.
  * @param	valor O valor a ser sacado.
  */
 	void sacar( num_type _numero, float valor );
 /**
- * @brief	Deposito um valor em uma Conta.
- * @param	_numero O número da conta .
+ * @brief	Deposita um valor em uma Conta.
+ * @param	_numero O número da conta.
  * @param	valor O valor a ser depositado.
  */
 	void depositar( num_type _numero, float valor );
-	void saldo(  );
-	void extrato(  );
-	void transferir(  );
+/**
+ * @brief	Imprime o saldo da Conta no std::cout.
+ * @param	_numero O número da conta.
+ */
+	void saldo( num_type _numero );
+/**
+ * @brief	Imprime as 3 últimas movimentações da Conta no std::cout.
+ * @param	_numero O número da conta.
+ */
+ 	void extrato( num_type _numero );
+/**
+ * @brief	Transfere um valor de uma conta para outra.
+ * @param	conta1 A conta que vai ser debitada.
+ * @param	conta2 A conta que vai receber o depósito.
+ */
+	void transferir( num_type conta1, num_type conta2, float valor );
 
 	std::vector<std::unique_ptr<Conta>> contas;
 
