@@ -24,6 +24,7 @@ class Agencia
 private:
 	iter_Conta procurar(num_type _numero);
 	num_type numero;
+	std::vector<std::unique_ptr<Conta>> contas;
 public:
 /**
  * @brief Construtor padrão
@@ -84,7 +85,6 @@ public:
  */
 	void transferir( num_type conta1, num_type conta2, float valor );
 
-	std::vector<std::unique_ptr<Conta>> contas;
 
 //=== Operadores
 	friend std::ostream& operator<< (std::ostream &o, Agencia const &a);

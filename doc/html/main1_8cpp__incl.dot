@@ -16,7 +16,7 @@ digraph "src/questao01/main1.cpp"
   Node6 [label="fruta.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fruta_8h_source.html"];
   Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 [label="bebida.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bebida_8h_source.html"];
+  Node7 [label="bebida.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bebida_8h.html",tooltip="Declaração da classe Bebida derivada da classe Produto. "];
   Node7 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node8 [label="roupa.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$roupa_8h_source.html"];

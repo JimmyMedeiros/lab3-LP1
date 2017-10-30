@@ -32,7 +32,6 @@ questao01: $(OBJ_DIR)/main1.o $(OBJ_DIR)/bebida.o $(OBJ_DIR)/fruta.o $(OBJ_DIR)/
 	@echo "+++ [Executavel questao01 criado em $(BIN_DIR)] +++"
 	@echo "============="
 
-## Arquivos objeto
 $(OBJ_DIR)/main1.o: $(SRC_DIR)/questao01/main1.cpp
 	$(CC) -c $(CPPFLAGS) -I$(INC_DIR)/questao01 -o $@ $<
 
@@ -65,6 +64,18 @@ $(OBJ_DIR)/agencia.o: $(SRC_DIR)/questao02/agencia.cpp $(OBJ_DIR)/conta.o
 
 $(OBJ_DIR)/conta.o: $(SRC_DIR)/questao02/conta.cpp
 	$(CC) -c $(CPPFLAGS) -I$(INC_DIR)/questao02 -o $@ $<
+
+####	Questão 03		####
+questao03: $(OBJ_DIR)/main3.o $(OBJ_DIR)/agencia.o $(OBJ_DIR)/conta.o
+	@echo "============="
+	@echo "Ligando o alvo $@"
+	@echo "============="
+	$(CC) $(CPPFLAGS) -o $(BIN_DIR)/$@ $^
+	@echo "+++ [Executavel questao02 criado em $(BIN_DIR)] +++"
+	@echo "============="
+
+$(OBJ_DIR)/main3.o: $(SRC_DIR)/questao03/main3.cpp $(OBJ_DIR)/conta.o
+	$(CC) -c $(CPPFLAGS) -I$(INC_DIR)/questao03 -o $@ $<
 
 # Alvo (target) para a geração automatica de documentacao usando o Doxygen.
 # Sempre remove a documentacao anterior (caso exista) e gera uma nova.

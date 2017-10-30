@@ -13,4 +13,6 @@ digraph "include/questao02/agencia.h"
   Node5 [label="conta.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$conta_8h.html",tooltip="Declaração dos métodos e atributos da classe Conta. "];
   Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
 	bb->criar_conta("Teobaldo Stallman da Silva", 114251);
 	bb->criar_conta("Pedrinho Estacionador (aka Homem Aranha)", 60617);
 
-	(*bb->contas.begin())->set_saldo(1000);
+	bb->depositar(114251 ,2500);
 
 	std::cout << "=== Banco do Brazel ===\n\n";
 	std::cout << *bb;
@@ -37,6 +37,11 @@ int main(int argc, char const *argv[])
 	std::cout << "\n\n>>>>>> IMPRIMINDO EXTRATO\n\n";
 
 	bb->extrato( 60617 );
+
+	bb->transferir( 60617, 114251, 20000 );
+
+	bb->extrato( 60617 );
+	bb->extrato( 114251 );
 
 	std::cout << *bb;
 

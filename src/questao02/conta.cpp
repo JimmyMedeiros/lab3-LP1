@@ -7,7 +7,9 @@
  * @date     26/10/2017
  */
 
- #include "conta.h"
+#include "conta.h"
+
+#define NOT_ENOUGH_MONEY "Saldo insuficiente\n";
 
 Conta::Conta()
 { /* Vazio */ }
@@ -21,9 +23,39 @@ void Conta::set_agencia(unsigned int _agencia)
 {
 	this->agencia = _agencia;
 }
-void Conta::set_saldo(float _saldo)
+void Conta::tirar_dinheiro(float valor)
 {
-	this->saldo = _saldo;
+	if (saldo < valor)
+	{
+		std::cerr << NOT_ENOUGH_MONEY;
+		return;
+	}
+	this->saldo -= valor;
+	add_movimentacao("Saque realizado no valor de: R$ " 
+			+ std::to_string(valor) );
+}
+void Conta::tirar_dinheiro(float valor, num_type conta)
+{
+	if (saldo < valor)
+	{
+		std::cerr << NOT_ENOUGH_MONEY;
+		return;
+	}
+	this->saldo -= valor;
+	add_movimentacao("Transferência para a conta " + std::to_string(conta) 
+		+ " realizada no valor de: R$ " + std::to_string(valor) );
+
+}
+void Conta::depositar_dinheiro(float valor)
+{
+	this->saldo += valor;
+	add_movimentacao("Depósito realizado no valor de: R$ " + std::to_string(valor) );
+}
+void Conta::depositar_dinheiro(float valor, num_type conta)
+{
+	this->saldo -= valor;
+	add_movimentacao("Transferência recebida da conta "
+			+ std::to_string(conta) + " no valor de: R$ " + std::to_string(valor) );
 }
 num_type Conta::get_numero()
 {

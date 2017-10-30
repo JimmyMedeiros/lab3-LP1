@@ -87,11 +87,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Membros públicos</a> &#124;
+<a href="#pub-attribs">Campos de Dados</a> &#124;
 <a href="#friends">Amigos</a>  </div>
   <div class="headertitle">
 <div class="title">Referência à classe Conta</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Diagrama de heranças da classe Conta</div>
+<div class="dyncontent">
+<div class="center"><img src="classConta__inherit__graph.png" border="0" usemap="#Conta_inherit__map" alt="Inheritance graph"/></div>
+<map name="Conta_inherit__map" id="Conta_inherit__map">
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros públicos</h2></td></tr>
@@ -106,10 +114,20 @@ Membros públicos</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConta.html#a3ccbec9f76a134bed1ef6528d1cc8de1">set_agencia</a> (num_type _agencia)</td></tr>
 <tr class="memdesc:a3ccbec9f76a134bed1ef6528d1cc8de1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muda a agência da conta. <br /></td></tr>
 <tr class="separator:a3ccbec9f76a134bed1ef6528d1cc8de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ca5bfac56f63f6f533cf02731ea5ca1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ca5bfac56f63f6f533cf02731ea5ca1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConta.html#a1ca5bfac56f63f6f533cf02731ea5ca1">set_saldo</a> (float _saldo)</td></tr>
-<tr class="memdesc:a1ca5bfac56f63f6f533cf02731ea5ca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muda o saldo da conta. <br /></td></tr>
-<tr class="separator:a1ca5bfac56f63f6f533cf02731ea5ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac435bbef5358ff24f5b17a24c514bd0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac435bbef5358ff24f5b17a24c514bd0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConta.html#aac435bbef5358ff24f5b17a24c514bd0">tirar_dinheiro</a> (float valor)</td></tr>
+<tr class="memdesc:aac435bbef5358ff24f5b17a24c514bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtrai um valor do saldo da conta. <br /></td></tr>
+<tr class="separator:aac435bbef5358ff24f5b17a24c514bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb13f816eb71b40f6f6dd3406d80a6d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affb13f816eb71b40f6f6dd3406d80a6d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>tirar_dinheiro</b> (float valor, num_type conta)</td></tr>
+<tr class="separator:affb13f816eb71b40f6f6dd3406d80a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5616e1e5fc9d380f52b0b8c3ff4d610"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5616e1e5fc9d380f52b0b8c3ff4d610"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConta.html#af5616e1e5fc9d380f52b0b8c3ff4d610">depositar_dinheiro</a> (float valor)</td></tr>
+<tr class="memdesc:af5616e1e5fc9d380f52b0b8c3ff4d610"><td class="mdescLeft">&#160;</td><td class="mdescRight">Soma um valor do saldo da conta. <br /></td></tr>
+<tr class="separator:af5616e1e5fc9d380f52b0b8c3ff4d610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef8b3e23e5bb0d8bf37f6de9de96ac1a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef8b3e23e5bb0d8bf37f6de9de96ac1a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>depositar_dinheiro</b> (float valor, num_type conta)</td></tr>
+<tr class="separator:aef8b3e23e5bb0d8bf37f6de9de96ac1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd42a0aac66f11f011ad565882e37ef0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd42a0aac66f11f011ad565882e37ef0"></a>
 num_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConta.html#afd42a0aac66f11f011ad565882e37ef0">get_numero</a> ()</td></tr>
 <tr class="memdesc:afd42a0aac66f11f011ad565882e37ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o número da <a class="el" href="classConta.html">Conta</a>. <br /></td></tr>
@@ -118,6 +136,16 @@ num_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConta.html#a97aa2bc03b49320237cd43a3a9499528">get_saldo</a> ()</td></tr>
 <tr class="memdesc:a97aa2bc03b49320237cd43a3a9499528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o saldo da <a class="el" href="classConta.html">Conta</a>. <br /></td></tr>
 <tr class="separator:a97aa2bc03b49320237cd43a3a9499528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa7214fc5594357ba345a603bffade5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa7214fc5594357ba345a603bffade5a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>add_movimentacao</b> (std::string mv)</td></tr>
+<tr class="separator:afa7214fc5594357ba345a603bffade5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Campos de Dados</h2></td></tr>
+<tr class="memitem:aa43a129872886d9c4e506859289bdca7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa43a129872886d9c4e506859289bdca7"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classConta.html#aa43a129872886d9c4e506859289bdca7">movimentacao</a></td></tr>
+<tr class="memdesc:aa43a129872886d9c4e506859289bdca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Todas as movimentações realizadas na conta. <br /></td></tr>
+<tr class="separator:aa43a129872886d9c4e506859289bdca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amigos</h2></td></tr>

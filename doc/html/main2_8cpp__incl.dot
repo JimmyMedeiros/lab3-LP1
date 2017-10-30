@@ -16,4 +16,6 @@ digraph "src/questao02/main2.cpp"
   Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node7 [label="conta.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$conta_8h.html",tooltip="Declaração dos métodos e atributos da classe Conta. "];
   Node7 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['universidade_20federal_20do_20rio_20grande_20do_20norte_20_3cbr_3e_20instituito_20metrópole_20digital',['Universidade Federal do Rio Grande do Norte &lt;br&gt; Instituito Metrópole Digital',['../md_README.html',1,'']]]
+  ['tirar_5fdinheiro',['tirar_dinheiro',['../classConta.html#aac435bbef5358ff24f5b17a24c514bd0',1,'Conta']]],
+  ['transferir',['transferir',['../classAgencia.html#a71ce99e55e4785721a80277ebf454afa',1,'Agencia']]]
 ];

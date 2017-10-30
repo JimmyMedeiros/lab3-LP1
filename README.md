@@ -12,7 +12,7 @@ Terceiro laboratório da disciplina de Linguagem de Programação 1 do curso de 
 - make all:<br>
 Compila todos os programas
 - make questaon:<br>
-Compila o programa n, sendo n o número do programa que pode ser: 01, 02 ou 03
+Compila a questão n, sendo n o número do programa que pode ser: 01, 02 ou 03
 - make debug:<BR>
 Compila os programas em modo de depuração
 - make doxy:<BR>
@@ -20,10 +20,14 @@ Gera na pasta doc a documentação em html
 - make clean:<BR>
 Apaga os arquivos das bastas bin e build
 
-### Programa 01
+### Questão 01
 
 @TODO
 
-### Programa 02
+### Questão 02
+
+@TODO
+
+### Questão 03
 
 @TODO

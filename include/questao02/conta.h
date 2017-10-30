@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 
 using num_type = unsigned int;
 
@@ -42,9 +43,16 @@ public:
  */
 	void set_agencia(num_type _agencia);
 /**
- * @brief	Muda o saldo da conta.
+ * @brief	Subtrai um valor do saldo da conta.
  */
-	void set_saldo(float _saldo);
+	void tirar_dinheiro(float valor);
+	void tirar_dinheiro(float valor, num_type conta);
+/**
+ * @brief	Soma um valor do saldo da conta.
+ */
+	void depositar_dinheiro(float valor);
+	void depositar_dinheiro(float valor, num_type conta);
+
 /**
  * @brief	Retorna o número da Conta.
  */
@@ -55,7 +63,6 @@ public:
 	float get_saldo();
 //=== Movimentações
 	void add_movimentacao(std::string mv);
-	//std::vector<std::string> get_movimentacao();
 
 //=== Operadores
 	friend std::ostream& operator<< (std::ostream &o, Conta const &c);

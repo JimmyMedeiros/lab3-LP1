@@ -1,5 +1,5 @@
 /**
- * @file     produto.cpp
+ * @file     bebida.h
  * @brief    Declaração da classe Bebida derivada da classe Produto.
  *
  * @author   Josivan Medeiros da Silva Gois
